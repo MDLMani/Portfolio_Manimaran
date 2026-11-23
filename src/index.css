@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  /* clip avoids ScrollTrigger pin/scrub bugs that overflow-x:hidden on body causes */
+  overflow-x: clip;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Keep default touch scrolling on the page; only buttons need tap optimization */
+button,
+a {
+  touch-action: manipulation;
+}
+
+html,
+body {
+  overflow-y: scroll;
+  /* allow pull-to-refresh on real phones */
+  overscroll-behavior-y: auto;
+}
+
+img {
+  max-width: 100%;
+}
